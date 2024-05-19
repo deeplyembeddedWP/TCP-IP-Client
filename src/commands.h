@@ -1,0 +1,12 @@
+#ifndef __COMMANDS_H
+#define __COMMANDS_H
+
+enum commands_t {
+  CMD_DOWNLOAD_FILE = 0x01,
+  CMD_DOWNLOAD_FILE_EOF,
+  CMD_DOWNLOAD_FILE_ERROR,
+
+  CMD_RESERVED_END = 0xFF
+};
+
+#endif // __COMMANDS_H

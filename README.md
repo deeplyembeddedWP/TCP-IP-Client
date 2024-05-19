@@ -1,2 +1,2 @@
-# tcp-ip-client
- A simple client, connects to server and requests file
+# TCP/IP Client
+ A tcp ip client downloads file from server
