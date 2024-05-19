@@ -14,10 +14,13 @@
 #include <sys/socket.h>
 #include <unistd.h>
 
-#define PORT 12345
-#define FILE_NAME_SIZE_MAX 32 + 1 /* null */
-#define FILE_DOWNLOAD_TABLE "/home/vinay_divakar/file_download"
-#define FILE_DOWNLOAD_PATH_NAME_SIZE_MAX 64
+#define PORT 12345 // Server port to connect to
+#define FILE_NAME_SIZE_MAX                                                     \
+  32 + 1 // Maximum size supported for the requested filename
+#define FILE_DOWNLOAD_TABLE                                                    \
+  "/home/vinay_divakar/file_download" // file download path
+#define FILE_DOWNLOAD_PATH_NAME_SIZE_MAX                                       \
+  64 // Maximum size supported for the file path
 
 struct file_download_t {
   int fd;
@@ -183,6 +186,7 @@ int file_download(struct file_download_t *ptr) {
     printf("EOF recd\r\n");
     err = EOF;
   } else {
+    /// enable to whats being received from the server
     printf("recv: %.*s\r\n", err, (char *)buffer);
     // TODO: write received contents to file
   }
