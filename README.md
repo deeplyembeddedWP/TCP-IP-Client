@@ -33,6 +33,7 @@ vinay_divakar@vinay-divakar-Linux:~/Server$ ./client_app <filename>
 
 ## How it works
 The client does the follow:
+
 1. Reads the <filename> arg from command-line.
 2. Sets up the socket and connects to the server.
 3. Sends the request to the server i.e. <filename>.
@@ -43,7 +44,10 @@ The client does the follow:
 
 ## Things to be implemented
 1. *Download Receievd File Contents*
+   
 The receievd file contents from the server needs to written to a file for download on the loacal machine. On receiving the first response from the server, create a file with the requested <filename> and write the contents to it with start offset 0. On a successful writes, add the number of bytes written to the file to a <variable> which can be used as start offset for subsequent writes. Keep doing this until we have received the eof indication from the server.
 *Another better way about this is to get the size of the file to be download from the server and use that to determine the progress of the download.*
-3. *Tidy up*
+
+2. *Tidy up*
+   
 Functions are all over the place in main and needs to be tidied up and better organized.   
